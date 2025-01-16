@@ -8,11 +8,11 @@ def factorial(n):
         n -= 1 # Decrement n to avoid infinite loop
     return result
 
-if len(sys.argv) > 1:
+if len(sys.argv) < 2:
+    print("Usage: ./factorial.py <integer>")
+else:
     try:
         f = factorial(int(sys.argv[1]))
         print(f)
     except ValueError:
         print("Please provide a valid integer.")
-    else:
-        print("Usage: ./factorial.py <integer>")
